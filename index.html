@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">JONG BITES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Service</h1>
+            <p class="lead">We offer the best solutions for your needs.</p>
+            <a href="#signup" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </header>
+
+    <section id="features" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">WHAT WE DEAL IN</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-cogs fa-3x mb-3"></i>
+                    <h3>milk</h3>
+                    <img src="cereal.jpg" alt="organic milk">
+                    <p>For the strength you need <span>complete diet</span> .</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-laptop fa-3x mb-3"></i>
+                    <h3>steak meat</h3>
+                    <img src="meat.jpg" alt="good quality">
+                    <p>Fresh meat and organic.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h3>Basmati</h3>
+                    <img src="rice.jpg" alt="real flovour">
+                    <p>easy and simple to prepare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="mb-4">About Us</h2>
+            <p>for the best you can require for your taste<br>tasteful &delcious</strong></p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 JONGBITS. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Thank you, ${name}! We have received your message.`);
+    document.getElementById('contact-form').reset();
+});
+    </script>
+</body>
+</html>
+
+
